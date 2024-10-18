@@ -1,0 +1,14 @@
+package com.nareshIt.raghu.handler;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import com.nareshIt.raghu.exception.CompanyNotFoundException;
+
+@RestControllerAdvice
+public class CustomeExceptionHandler {
+	public ResponseEntity<String> handleCompanyNotFoundException(CompanyNotFoundException cnfe) {
+		return ResponseEntity.internalServerError().body(cnfe.getMessage());
+	}
+
+}

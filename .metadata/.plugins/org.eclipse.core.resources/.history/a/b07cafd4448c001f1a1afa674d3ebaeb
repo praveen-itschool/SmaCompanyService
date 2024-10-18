@@ -1,0 +1,25 @@
+package com.nareshIt.raghu.handler;
+
+import java.util.Date;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import com.nareshIt.raghu.exception.CompanyNotFoundException;
+import com.nareshIt.raghu.handler.response.ErrorMessage;
+
+@RestControllerAdvice
+public class CustomeExceptionHandler {
+    @ExceptionHandler(CompanyNotFoundException.class)
+    public ResponseEntity<ErrorMessage> handleCompanyNotFoundException(CompanyNotFoundException cnfe) {
+        ErrorMessage errorMessage = new ErrorMessage(
+                new Date().toString(),
+                cnfe.getMessage(),
+                HttpStatus.INTERNAL_SERVER_ERROR.value(),  // Changed to .value() to return int
+                HttpStatus.INTERNAL_SERVER_ERROR.name()    // HTTP status code as String (optional)
+        );
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorMessage);
+    }
+}

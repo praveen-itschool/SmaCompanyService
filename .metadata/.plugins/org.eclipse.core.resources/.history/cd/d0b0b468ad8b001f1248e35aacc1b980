@@ -1,0 +1,5 @@
+package com.nareshIt.raghu;
+
+public @interface EnableEurekaClient {
+
+}

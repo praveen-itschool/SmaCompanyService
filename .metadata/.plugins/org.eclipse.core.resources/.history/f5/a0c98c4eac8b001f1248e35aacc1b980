@@ -1,0 +1,5 @@
+#spring.application.name=SmaCompanyService
+#Server port
+server.port=9901
+#serviceId
+spring.application.name=COMPANY-SERVICE

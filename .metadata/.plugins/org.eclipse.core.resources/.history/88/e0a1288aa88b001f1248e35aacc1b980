@@ -1,0 +1,5 @@
+package com.nareshIt.raghu.service;
+
+public interface ICompanyService {
+
+}

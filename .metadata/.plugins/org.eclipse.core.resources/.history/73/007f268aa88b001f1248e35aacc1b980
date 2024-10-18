@@ -1,0 +1,34 @@
+package com.nareshIt.raghu.service.impl;
+
+import java.util.List;
+
+import com.nareshIt.raghu.entity.Company;
+import com.nareshIt.raghu.service.ICompanyService;
+
+public class CompanyServiceImpl implements ICompanyService {
+
+	@Override
+	public Long createCompant(Company cob) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateCompany(Company cob) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Company getOneCompany(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Company> getAllCompanies() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
